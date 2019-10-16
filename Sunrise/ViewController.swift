@@ -36,6 +36,15 @@ class ViewController: UIViewController {
                     (xyz) in
      // 2. write your code to deal with the JSON response
                 print(xyz)
+            
+            //convert the response to a JSON Object
+            
+            let x = JSON(xyz.value)
+             let sunrise = x["results"]["sunrise"]
+                        let sunset = x["results"]["sunset"]
+            
+                        print("Sunrise: \(sunrise)")
+                        print("Sunset: \(sunset)")
 
 }
 }
