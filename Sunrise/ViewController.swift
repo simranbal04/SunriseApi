@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -25,13 +27,17 @@ class ViewController: UIViewController {
         
         //1. go to sunrise api
         //2. wait for the website to respond
-        let websiteURL = "https://sunrise-sunset.org/"
-        
-        AF.request(websiteURL).responseJSON {
-                   (response) in
-    }
-    
+//        let websiteURL = "https://sunrise-sunset.org/"
+//
+//        AF.request(websiteURL).responseJSON {
+//                   (response) in
+//    }
+        AF.request("https://api.sunrise-sunset.org/json?lat=43.6532&lng=-79.3832").responseJSON {
+                    (xyz) in
+     // 2. write your code to deal with the JSON response
+                print(xyz)
 
+}
 }
 }
 
