@@ -45,6 +45,8 @@ class ViewController: UIViewController {
             
                         print("Sunrise: \(sunrise)")
                         print("Sunset: \(sunset)")
+                self.resultLabel.text = "Sunrise: \(sunrise)"
+
 
 }
 }
